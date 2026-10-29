@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://vwvckdwu6vw7"]
+
+[ext_resource type="Script" uid="uid://bvn3j42hlc2dd" path="res://scirpt/mixing_station.gd" id="1_oe436"]
+[ext_resource type="PackedScene" uid="uid://cbvtbi43qrr84" path="res://scene/pause_m.tscn" id="2_0w8io"]
+
+[node name="mixing station" type="Node2D" unique_id=737546337]
+process_mode = 3
+script = ExtResource("1_oe436")
+
+[node name="pause_m" parent="." unique_id=963300218 instance=ExtResource("2_0w8io")]
+visible = false
+offset_left = 299.0
+offset_top = 173.0
+offset_right = 299.0
+offset_bottom = 173.0

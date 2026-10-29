@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bw272i16qv1ur"]
+
+[ext_resource type="Script" uid="uid://dgg58cuad6lri" path="res://scirpt/save_game_m.gd" id="1_aw0bv"]
+
+[node name="save game_m" type="Control" unique_id=1052333321]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_aw0bv")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1126756799]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.49019608, 0.49019608, 0.49019608, 0.78431374)
+
+[node name="VSplitContainer" type="VSplitContainer" parent="ColorRect" unique_id=578931252]
+layout_mode = 1
+offset_right = 43.0
+offset_bottom = 31.0
+
+[node name="Button" type="Button" parent="ColorRect/VSplitContainer" unique_id=1210178291]
+layout_mode = 2
+text = "save 1"
+
+[node name="Button2" type="Button" parent="ColorRect/VSplitContainer" unique_id=1759536348]
+layout_mode = 2
+text = "save 2"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1326523658]
+layout_mode = 0
+offset_left = 75.0
+offset_right = 115.0
+offset_bottom = 40.0
+
+[node name="delete" type="Button" parent="HBoxContainer" unique_id=1479954908]
+layout_mode = 2
+text = "x"
+
+[connection signal="pressed" from="ColorRect/VSplitContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/delete" to="." method="_on_delete_pressed"]

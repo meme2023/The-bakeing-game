@@ -10,9 +10,13 @@ config_version=5
 
 [application]
 
-config/name="the bakeay game"
-run/main_scene="uid://ce721n2c5cjtq"
+config/name="The baking game"
+run/main_scene="uid://5umu2no0dngt"
 config/features=PackedStringArray("4.7", "Forward Plus")
+
+[autoload]
+
+Globle="*uid://dk8xtq1n1fvix"
 
 [display]
 

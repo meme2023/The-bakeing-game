@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://cbvtbi43qrr84"]
+
+[ext_resource type="Script" uid="uid://dd7eeo7w7ufoy" path="res://scirpt/pause_m.gd" id="1_tshgu"]
+[ext_resource type="PackedScene" uid="uid://bw272i16qv1ur" path="res://scene/save_game_m.tscn" id="2_4iwbs"]
+
+[node name="pause_m" type="Control" unique_id=963300218]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tshgu")
+
+[node name="save game_m" parent="." unique_id=1052333321 instance=ExtResource("2_4iwbs")]
+layout_mode = 0
+offset_left = -171.0
+offset_right = -171.0
+
+[node name="VSplitContainer" type="VSplitContainer" parent="." unique_id=95832194]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.0
+offset_top = -80.0
+offset_right = 29.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+split_offsets = PackedInt32Array(31, 74, 117)
+split_offset = 31
+
+[node name="reume" type="Button" parent="VSplitContainer" unique_id=73164378]
+layout_mode = 2
+text = "rusme"
+
+[node name="save" type="Button" parent="VSplitContainer" unique_id=285873175]
+layout_mode = 2
+text = "save"
+
+[node name="load" type="Button" parent="VSplitContainer" unique_id=968392487]
+layout_mode = 2
+text = "load
+"
+
+[node name="exit_m" type="Button" parent="VSplitContainer" unique_id=1024469988]
+layout_mode = 2
+text = "exit to main menue
+"
+
+[connection signal="pressed" from="VSplitContainer/reume" to="." method="_on_reume_pressed"]
+[connection signal="pressed" from="VSplitContainer/save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="VSplitContainer/load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="VSplitContainer/exit_m" to="." method="_on_exit_m_pressed"]

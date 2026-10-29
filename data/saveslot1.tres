@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="GameData" format=3 uid="uid://uwcx4ijp5wg6"]
+
+[ext_resource type="Resource" uid="uid://cjbfg2yo2obaw" path="res://data/scenedata.tres" id="1_l3s5k"]
+[ext_resource type="Script" uid="uid://duas81qltnp26" path="res://scirpt/game_data.gd" id="1_u4pr0"]
+
+[resource]
+script = ExtResource("1_u4pr0")
+scene_data = ExtResource("1_l3s5k")
+metadata/_custom_type_script = "uid://duas81qltnp26"

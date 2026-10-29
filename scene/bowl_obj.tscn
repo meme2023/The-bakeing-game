@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dbv1igluowx0q"]
+
+[ext_resource type="Script" uid="uid://bvqe1mw3axkgp" path="res://scirpt/bowl_obj.gd" id="1_ie0ky"]
+[ext_resource type="Texture2D" uid="uid://m32kxcgh8ra5" path="res://assets/objects/bowl sprites.png" id="2_y0gfw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vivr"]
+atlas = ExtResource("2_y0gfw")
+region = Rect2(4, 6, 25, 23)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8vrlf"]
+atlas = ExtResource("2_y0gfw")
+region = Rect2(4, 6, 25, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbdty"]
+atlas = ExtResource("2_y0gfw")
+region = Rect2(34, 4, 29, 27)
+
+[node name="bowl obj" type="Node2D" unique_id=1203727783]
+process_mode = 1
+scale = Vector2(3, 3)
+script = ExtResource("1_ie0ky")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=933751886]
+offset_right = 25.0
+offset_bottom = 26.0
+texture_normal = SubResource("AtlasTexture_1vivr")
+texture_pressed = SubResource("AtlasTexture_8vrlf")
+texture_hover = SubResource("AtlasTexture_qbdty")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
