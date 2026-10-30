@@ -13,6 +13,9 @@ func _on_save_pressed() -> void:
 
 
 func _on_load_pressed() -> void:
+	get_tree().paused=false
+	
+			
 	Globle.load_game()
 
 

@@ -30,7 +30,7 @@ func load_game()->void:
 	game_data = loaded_data
 	if ResourceLoader.exists(game_data.scene_data.current_scene_path, "PackedScene"):
 		get_tree().change_scene_to_file(game_data.scene_data.current_scene_path)
-		
+		get_tree().paused=false
 
 func delete_game() -> void:
 	if FileAccess.file_exists(SAVE_PATH):
@@ -43,3 +43,4 @@ func delete_game() -> void:
 			push_error("Failed to delete save!")
 	else:
 		print("No save file found!")
+		

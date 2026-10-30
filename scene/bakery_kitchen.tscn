@@ -343,7 +343,7 @@ tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_62vve")
 
 [node name="Bakery Kitchen" type="Node2D" unique_id=1160581428]
-process_mode = 1
+process_mode = 3
 script = ExtResource("1_vexdx")
 
 [node name="pause_m" parent="." unique_id=963300218 instance=ExtResource("5_30td6")]
@@ -377,3 +377,4 @@ position = Vector2(279, 37)
 zoom = Vector2(0.72, 0.72)
 
 [editable path="pause_m"]
+[editable path="pause_m/save game_m"]

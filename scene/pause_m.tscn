@@ -54,7 +54,10 @@ layout_mode = 2
 text = "exit to main menue
 "
 
+[connection signal="pressed" from="save game_m/cancel" to="." method="_on_cancel_pressed"]
 [connection signal="pressed" from="VSplitContainer/reume" to="." method="_on_reume_pressed"]
 [connection signal="pressed" from="VSplitContainer/save" to="." method="_on_save_pressed"]
 [connection signal="pressed" from="VSplitContainer/load" to="." method="_on_load_pressed"]
 [connection signal="pressed" from="VSplitContainer/exit_m" to="." method="_on_exit_m_pressed"]
+
+[editable path="save game_m"]

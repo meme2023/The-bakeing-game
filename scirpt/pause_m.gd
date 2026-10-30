@@ -13,8 +13,15 @@ func _on_reume_pressed() -> void:
 
 func _on_save_pressed() -> void:
 	$"save game_m".show()
+	$VSplitContainer.hide()
 
 
 func _on_load_pressed() -> void:
-	get_tree().paused=false
 	Globle.load_game()
+	
+	
+
+
+func _on_cancel_pressed() -> void:
+	$"save game_m".hide()
+	$VSplitContainer.show()
